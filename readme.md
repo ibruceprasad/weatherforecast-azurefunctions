@@ -11,7 +11,7 @@ This project has three following Azure Functions <br><br>
 3. xUnit unit test <br>
 <br><br>
 ## Project Structure <br>
-<img src="weatherforecast-azurefunctions/Properties/Screenshot 2024-11-26 070242.jpg" alt="Description" width="200"/>
+<img src="WeatherForcast.Functions/Properties/Screenshot 2024-11-26 070242.jpg" alt="Description" width="200"/>
 ![Project structure](weatherforecast-azurefunctions/Properties/Screenshot 2024-11-26 070242.jpg)
 
 
