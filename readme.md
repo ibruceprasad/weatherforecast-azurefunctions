@@ -1,6 +1,7 @@
-# TimerTrigger - C<span>#</span>
+# Weather Forecast  - Azure Functions <span>#</span>
 
-The `TimerTrigger` makes it incredibly easy to have your functions executed on a schedule. This sample demonstrates a simple use case of calling your function every 5 minutes.
+This project has three Azure Functions <br>
+`1. Register` makes it incredibly easy to have your functions executed on a schedule. This sample demonstrates a simple use case of calling your function every 5 minutes.
 
 ## How it works
 
