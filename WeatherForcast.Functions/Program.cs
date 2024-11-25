@@ -6,40 +6,22 @@ using Microsoft.Extensions.DependencyInjection;
 using static System.Net.WebRequestMethods;
 using WeatherForcast.Middleware;
  
-
 var builder = FunctionsApplication.CreateBuilder(args);
-builder.Services.AddHttpClient("weatherapi", config =>
-{
-    config.BaseAddress = new Uri("http://api.weatherapi.com/v1/current.json");
-});
 
 builder.UseMiddleware<GlobalExceptionHandlerMiddleware>();
-builder.ConfigureFunctionsWebApplication();
 
+var weatherApi = Environment.GetEnvironmentVariable("WeatherApiBaseUrl");
+builder.Services.AddHttpClient("weatherapi", config =>
+{
+    config.BaseAddress = new Uri(uriString: weatherApi!);
+});
+
+builder.ConfigureFunctionsWebApplication();
 
 builder.UseWhen<ValidateRequestMiddleware>(context =>
 {
     return context.FunctionDefinition.Name == "Query" || context.FunctionDefinition.Name == "Register";
 });
-
-
-
-
-
-
-
-
-
-//.UseMiddleware<GlobalExceptionHandlerMiddleware>()
-//    .UseMiddleware<ValidateRequestMiddleware>();
-
-//(context =>
-//{
-//    //return context.FunctionDefinition.Name == "Register" || 
-//    return context.FunctionDefinition.Name == "Query";
-//})
-
-
 
 var app = builder.Build();
  

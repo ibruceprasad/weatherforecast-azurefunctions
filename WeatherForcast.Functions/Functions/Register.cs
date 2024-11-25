@@ -41,7 +41,6 @@ namespace WeatherForcast.Functions
             //ForecastRegister[] forecastRegster = JsonConvert.DeserializeObject<ForecastRegister[]>(inputResult);
             var place = registers.FirstOrDefault()?.Place;
             HttpResponseData response = request.CreateResponse();
-
             if (place is null)
             {
                 var regiter  = new ForecastRegister()
@@ -49,7 +48,6 @@ namespace WeatherForcast.Functions
                     Id = Guid.NewGuid(),
                     Place = placeParam
                 };
-
                 response = request.CreateResponse(System.Net.HttpStatusCode.OK);
                 await response.WriteStringAsync(JsonConvert.SerializeObject(regiter));
                 return new OutputType()
@@ -66,7 +64,6 @@ namespace WeatherForcast.Functions
                 ForecastRegister = null,
                 HttpResponseData = response
             };
-
             //return new ConflictObjectResult($"Registeration request for place: {place} is already taken");
             //throw new DuplicateRegisterException(place);
         }

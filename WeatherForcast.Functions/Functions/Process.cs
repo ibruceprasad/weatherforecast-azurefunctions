@@ -16,7 +16,6 @@ namespace WeatherForcast
         private HttpClient httpClient;
         private const string SqlInputQuery = @"SELECT Id, Place, Data from dbo.Register";
 
-
         public Process(ILoggerFactory loggerFactory, IHttpClientFactory factory)
         {
             _logger = loggerFactory.CreateLogger<Process>();
@@ -52,7 +51,5 @@ namespace WeatherForcast
 
             return outputResult;
         }
-
-
     }
 }

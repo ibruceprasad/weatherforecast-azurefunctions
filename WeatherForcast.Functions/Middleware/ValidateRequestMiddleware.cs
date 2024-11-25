@@ -37,8 +37,7 @@ namespace WeatherForcast.Middleware
                 await response.WriteStringAsync(responseBody);
                 //return;
             }
-
             await next(context);
         }
-        }
     }
+}

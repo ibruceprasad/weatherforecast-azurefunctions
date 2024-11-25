@@ -33,8 +33,8 @@ namespace WeatherForcast.Functions
                 var failureMessage = $"Query failed - Weather data for {req.Query.ToDictionary()["Place"]} is not found";
                 _logger.LogError($"{failureMessage}");
                 return new NotFoundObjectResult(failureMessage);
-                
             }
+
             return new OkObjectResult(forecastRegster.FirstOrDefault());
         }
     }
