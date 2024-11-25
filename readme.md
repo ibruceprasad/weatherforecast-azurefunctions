@@ -5,14 +5,13 @@ This project has three following Azure Functions <br><br>
 `2. Process`  : This function is triggered by an Azure Timer and retrieves weather data from a third-party API for the places listed in the Register table. The received weather data is then updated in the Data field of the Register table<br>
 `3. Query`    : This is triggered by an HTTP GET request with a place name as a query parameter and retrieves the weather data for the specified place from the Data field in the Register table.<br><br>
 ## Technologies
-<br><br>
+<br>
 1. .Net 8 Isolated Worer model <br>  
 2. Http Trigger, Timer Tigger, Sql Input and Output binding br>
 3. xUnit unit test <br>
-<br><br>
+<br>
 ## Project Structure <br>
-<img src="WeatherForcast.Functions/Properties/Screenshot 2024-11-26 070242.jpg" alt="Description" width="200"/>
-![Project structure](weatherforecast-azurefunctions/Properties/Screenshot 2024-11-26 070242.jpg)
+<img src="WeatherForcast.Functions/Properties/Screenshot 2024-11-26 070242.jpg" alt="Description" width="300"/>
 
 
 
