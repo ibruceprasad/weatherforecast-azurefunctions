@@ -11,7 +11,7 @@ This project has three following Azure Functions <br><br>
 3. xUnit unit test <br>
 <br><br>
 ## Project Structure <br>
-![Project structure](Properties/Screenshot 2024-11-26 070242.jpg)
+![Project structure](weatherforecast-azurefunctions/Properties/Screenshot 2024-11-26 070242.jpg)
 
 
 
